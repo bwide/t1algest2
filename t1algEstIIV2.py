@@ -15,7 +15,7 @@ with open(path) as file:
         rangeX = range(coordinates[0], coordinates[2])
         rangeY = range(coordinates[1], coordinates[3])
 
-        squares = set( [ (x, y) for x in rangeX for y in rangeY ] )
+        squares = set( itertools.product(rangeX, rangeY) )
 
         for key in color_dict.keys():
             color_dict[key] -= squares
