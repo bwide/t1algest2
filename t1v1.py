@@ -1,9 +1,10 @@
 import sys
+import itertools
 
 #SETUP
 path = sys.argv[1]
 
-coordinates_color_dict = {}
+dict = {}
 with open(path) as file:
     file.readline()
     for line in file:
@@ -13,13 +14,14 @@ with open(path) as file:
         
         rangeX = range(coordinates[0], coordinates[2])
         rangeY = range(coordinates[1], coordinates[3])
-        squares = [(x, y) for x in rangeX for y in rangeY]
         
-        coordinates_color_dict.update( dict.fromkeys(squares, color) )
+        squares = itertools.product(rangeX, rangeY)
+        
+        for key in squares: dict[key] = color
 
 colorCount = {}
 
-for coordinate, color in coordinates_color_dict.items():
+for coordinate, color in dict.items():
     if color in colorCount:
         colorCount[color] += 1
     else:

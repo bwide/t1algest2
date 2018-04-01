@@ -1,5 +1,6 @@
 import sys
 import itertools
+import time
 
 path = sys.argv[1]
 
@@ -18,8 +19,8 @@ with open(path) as file:
         squares = set( itertools.product(rangeX, rangeY) )
 
         for key in color_dict.keys():
-            color_dict[key] -= squares
-
+            if key != color:
+                color_dict[key] -= squares
 
         if color in color_dict:
             color_dict[color] += squares
@@ -27,4 +28,4 @@ with open(path) as file:
             color_dict[color] = squares
 
 for color in color_dict:
-    print(str(color) + ": " + str(len(color_dict[color])))
+    print(str(color) + ": " + str(color_dict[color]))
