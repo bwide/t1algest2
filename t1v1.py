@@ -15,9 +15,8 @@ with open(path) as file:
         rangeX = range(coordinates[0], coordinates[2])
         rangeY = range(coordinates[1], coordinates[3])
         
-        squares = itertools.product(rangeX, rangeY)
-        
-        for key in squares: dict[key] = color
+        for coordinate in itertools.product(rangeX, rangeY):
+            dict[coordinate] = color
 
 colorCount = {}
 
@@ -27,4 +26,4 @@ for coordinate, color in dict.items():
     else:
         colorCount[color] = 1
 
-print(colorCount)
+for color in colorCount: print(color + ": " + str(colorCount[color]))
