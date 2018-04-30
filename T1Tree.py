@@ -7,7 +7,8 @@ path = sys.argv[1]
 def size(bbox):
     return (bbox[2]-bbox[0])*(bbox[3]-bbox[1])
 
-# def subtract(box1, box2):
+def subtract(box1, box2):
+    return [box2]
 
 
 colors = []
@@ -25,8 +26,11 @@ with open(path) as file:
 
         # overlaps
         boxes = tree.intersect(bbox)
-        # for box in boxes:
-        #     tree.nodes.remove(box)
+        for box in boxes:
+            newBoxes = subtract( bbox, box.rect )
+            tree.nodes.remove(box)
+            for newBox in newBoxes:
+                tree.insert(box.item, newBox)
 
 
 for color in colors:
