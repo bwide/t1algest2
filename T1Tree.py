@@ -20,17 +20,14 @@ with open(path) as file:
 
         bbox = [int(x) for x in line[:4]]
         color = line[4].strip('\n')
-
         if color not in colors: colors.append(color)
-        # bbox = ( x0, y0, x1, y1 )
+        tree.insert(color, bbox)
 
         # overlaps
-        # boxes = tree.intersect(bbox)
+        boxes = tree.intersect(bbox)
         # for box in boxes:
-        #     tree.remove(color, box)
+        #     tree.nodes.remove(box)
 
-            
-        tree.insert(color, bbox)
 
 for color in colors:
     x = sum( size(x.rect) for x in tree.nodes if x.item == color)
