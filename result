@@ -1,0 +1,142 @@
+azul: 7
+vermelho: 14
+amarelo: 6
+verde: 18
+
+teste000004: 0.0m 0.0198540687561s
+ ------ 
+dourado: 102449481
+laranja: 646273801
+azul-escuro: 424094008
+violeta: 126990
+verde-claro: 83494896
+amarelo: 55867740
+cinza: 49203160
+preto: 294224403
+verde-escuro: 118533604
+vermelho: 177104759
+marrom: 101156394
+azul-claro: 239927075
+
+teste000100: 0.0m 0.0383658409119s
+ ------ 
+vermelho: 49676606
+azul-escuro: 100715418
+dourado: 189386553
+azul-claro: 88195292
+laranja: 47995863
+cinza: 610791154
+preto: 278757920
+verde-escuro: 113386095
+verde-claro: 301756455
+amarelo: 10999672
+marrom: 560290705
+violeta: 97636977
+
+teste000500: 0.0m 0.487624883652s
+ ------ 
+amarelo: 43734300
+preto: 135850986
+cinza: 456533372
+verde-claro: 294628818
+vermelho: 41308626
+laranja: 71553660
+azul-claro: 72960681
+marrom: 751955626
+verde-escuro: 125751102
+azul-escuro: 23134350
+dourado: 83800170
+violeta: 381298990
+
+teste001000: 0.0m 1.26099896431s
+ ------ 
+preto: 320941054
+vermelho: 46194176
+verde-claro: 1094664649
+dourado: 78184010
+azul-escuro: 118741694
+cinza: 38889565
+verde-escuro: 231573779
+marrom: 89856706
+violeta: 358977217
+amarelo: 19350558
+azul-claro: 55106767
+laranja: 19576371
+
+teste002000: 0.0m 3.50849485397s
+ ------ 
+azul-escuro: 55688495
+verde-claro: 546820129
+laranja: 45370002
+preto: 80705038
+verde-escuro: 20070743
+cinza: 20744951
+marrom: 324323179
+dourado: 466613247
+vermelho: 384382702
+violeta: 35911205
+azul-claro: 135219489
+amarelo: 378103496
+
+teste005000: 0.0m 12.4313800335s
+ ------ 
+violeta: 86347762
+cinza: 248460304
+dourado: 192982112
+verde-claro: 26527940
+amarelo: 19881385
+azul-escuro: 883701524
+marrom: 190891102
+verde-escuro: 348353443
+laranja: 30620362
+vermelho: 430834907
+azul-claro: 17175578
+preto: 18682727
+
+teste010000: 1.0m 33.0932879448s
+ ------ 
+violeta: 81699650
+azul-claro: 74229606
+marrom: 39116244
+dourado: 63334911
+cinza: 484434741
+preto: 260713551
+verde-escuro: 744589119
+verde-claro: 17566367
+vermelho: 52649419
+amarelo: 271475638
+laranja: 266177046
+azul-escuro: 142534193
+
+teste020000: 1.0m 9.02297711372s
+ ------ 
+amarelo: 168262252
+dourado: 247561886
+marrom: 179134256
+cinza: 1177336248
+azul-claro: 161008111
+laranja: 107777871
+violeta: 52688362
+azul-escuro: 53280155
+preto: 8251078
+verde-claro: 197218193
+verde-escuro: 127164023
+vermelho: 19697714
+
+teste050000: 4.0m 44.8976421356s
+ ------ 
+verde-escuro: 119277132
+dourado: 465688136
+azul-claro: 19719680
+preto: 122098760
+violeta: 727899501
+laranja: 219125373
+cinza: 111023519
+azul-escuro: 25242169
+marrom: 192074167
+verde-claro: 69823182
+vermelho: 233144402
+amarelo: 194578814
+
+teste100000: 9.0m 4.11588120461s
+ ------ 
