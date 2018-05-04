@@ -2,6 +2,7 @@ import sys
 sys.setrecursionlimit(10000)
 from pyqtree import Index
 from rect import Rectangle
+import time
 
 path = sys.argv[1]
 
@@ -13,12 +14,17 @@ colors = []
 
 with open(path) as file:
     elements = int(file.readline())
-    tree = Index(bbox=(0,0,50000,50000), max_depth=10000, max_items=200000 )
+
+    start = time.time()
+
+    tree = Index(bbox=(0,0,50000,50000), max_depth=10000, max_items=elements*4 )
     for line in file:
         line = line.split(' ')
+
         x1, y1, x2, y2 = [int(x) for x in line[:4]]
         bbox = (x1, y1, x2, y2)
         newRect = Rectangle( x1, y1, x2, y2 )
+
         color = line[4].strip('\n')
 
         if color not in colors: colors.append(color)
@@ -35,7 +41,16 @@ with open(path) as file:
 
         tree.insert(color, bbox)
 
-
+output = open("result", "a")
 for color in colors:
     x = sum( size(x.rect) for x in tree.nodes if x.item == color)
-    print(color + ": " + str(x))
+    output.write( color + ": " + str(x) + '\n')
+    
+output.write('\n')
+runtime = time.time() - start
+
+minutes = runtime/60
+seconds = runtime%60
+
+output.write(path + ": " + str(round(minutes)) + "m " + str(seconds) + "s" + '\n ------ \n')
+output.close()
